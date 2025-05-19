@@ -17,6 +17,7 @@
   flex-direction: row;
   justify-content: space-between;
   height: 10vh;
+  border-bottom: 5px solid rgb(171, 150, 32);
 }
 
 .logo-body {
