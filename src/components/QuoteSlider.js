@@ -50,7 +50,8 @@ const styles = {
   text: {
     fontSize: "1.2rem",
     marginBottom: "0.5rem",
-    backgroundColor:"white"
+    color:"black",
+    fontWeight:"bold"
   },
   author: {
     fontWeight: "bold",

@@ -33,6 +33,7 @@ const SearchBar = ({ onSearch, onLoading }) => {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Enter name of the title"
+        id="input-search"
       />
       <button className="search-button" onClick={handleSearch}>
         SEARCH DATABASE
