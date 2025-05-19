@@ -1,0 +1,36 @@
+.link-home-page,
+.link-about-page {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: transform 0.1s ease-in-out;
+}
+
+.link-about-page:hover,
+.link-home-page:hover {
+  transform: scale(1.1);
+}
+
+.header-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+.logo-body {
+  display: flex;
+  align-items: center;
+}
+
+.logo-name {
+  font-weight: 600;
+}
+
+.nav-body {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin-right: 20px;
+}
