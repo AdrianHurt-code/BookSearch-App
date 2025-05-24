@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import quotes from "../data/quotes";
+import "./QuoteSlider.css"
 
 const QuoteSlider = () => {
   const [index, setIndex] = useState(0);
@@ -17,20 +18,14 @@ const QuoteSlider = () => {
   return (
     <div
       className="slider-parent"
-      style={{
-        display: "flex",
-        width: "100%",
-        justifyContent: "center",
-        marginTop: "30px",
-      }}
     >
-      <div className="slider-space" style={styles.slider}>
-        <p style={styles.text}>"{quotes[index].text}"</p>
-        <p style={styles.author}>{quotes[index].author}</p>
-        <button onClick={prevQuote} style={styles.button}>
+      <div className="slider-space">
+        <p className="slider-quote-text" >"{quotes[index].text}"</p>
+        <p className="slider-author-text" >{quotes[index].author}</p>
+        <button className="slider-button-prev" onClick={prevQuote} >
           PREVIOUS QUOTE
         </button>
-        <button onClick={nextQuote} style={styles.button}>
+        <button className="slider-button-next" onClick={nextQuote} >
           NEXT QUOTE
         </button>
       </div>
@@ -38,35 +33,6 @@ const QuoteSlider = () => {
   );
 };
 
-const styles = {
-  slider: {
-    padding: "1rem",
-    borderRadius: "10px",
-    maxWidth: "700px",
-    textAlign: "center",
-    cursor: "default",
-  
-  },
-  text: {
-    fontSize: "1.2rem",
-    marginBottom: "0.5rem",
-    color:"black",
-    fontWeight:"bold"
-  },
-  author: {
-    fontWeight: "bold",
-    color: "#555",
-  },
-  button: {
-    margin: "20px 10px 0px 10px",
-    padding: "10px",
-    backgroundColor: "#da9b13",
-    color: "white",
-    border: "3px solid black",
-    borderRadius: "5px",
-    cursor: "pointer",
-    fontWeight: "bold",
-  },
-};
+
 
 export default QuoteSlider;
