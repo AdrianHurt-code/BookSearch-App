@@ -10,6 +10,7 @@ const Home = () => {
   const [books, setBooks] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
+  const [noResults,setNoResults] = useState(false)
   const booksPerPage = 20;
 
   const bookListRef = useRef(null);
@@ -17,9 +18,9 @@ const Home = () => {
   const handleSearchResults = (results) => {
     setBooks(results);
     setCurrentPage(1);
-    // Scrollnutí ke knihám
+    setNoResults(results.length===0)
     setTimeout(() => {
-      if (bookListRef.current) {
+      if (results.length > 0 && bookListRef.current) {
         bookListRef.current.scrollIntoView({
           behavior: "smooth",
           block: "start",
@@ -39,7 +40,11 @@ const Home = () => {
       <h1 className="find-quote">Find your book!</h1>
 
       <SearchBar onSearch={handleSearchResults} onLoading={setIsLoading} />
-
+      {noResults && (
+  <p style={{ color: "black", fontWeight: "bold", marginTop: "20px" }}>
+    No books were found
+  </p>
+)}
       {isLoading ? (
         <Loader />
       ) : (

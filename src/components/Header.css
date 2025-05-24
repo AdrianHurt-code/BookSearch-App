@@ -7,6 +7,7 @@
   transition: transform 0.1s ease-in-out;
 }
 
+
 .link-about-page:hover,
 .link-home-page:hover {
   transform: scale(1.1);
@@ -36,4 +37,16 @@
   gap: 50px;
   align-items: center;
   margin-right: 20px;
+}
+
+@media (max-width:600px){
+  .nav-body {
+    gap:20px
+  }
+}
+
+@media (max-width:370px){
+  .nav-body {
+    gap:5px
+  }
 }
