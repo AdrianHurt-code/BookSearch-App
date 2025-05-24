@@ -35,7 +35,7 @@ const BookDetail = () => {
           setEdition(editionData);
         }
       } catch (error) {
-        console.error("Chyba při načítání detailu knihy:", error);
+        console.error("Error during book loading", error);
       } finally {
         setLoading(false);
       }
@@ -66,7 +66,7 @@ const BookDetail = () => {
                       author.name ? author.name : "Author is not available"
                     )
                     .join(", ")
-                : "Neznámý autor"}
+                : "Unknown author"}
             </p>
 
             {edition?.number_of_pages && (

@@ -41,7 +41,7 @@ const Home = () => {
 
       <SearchBar onSearch={handleSearchResults} onLoading={setIsLoading} />
       {noResults && (
-  <p style={{ color: "black", fontWeight: "bold", marginTop: "20px" }}>
+  <p className="no-results-text">
     No books were found
   </p>
 )}
