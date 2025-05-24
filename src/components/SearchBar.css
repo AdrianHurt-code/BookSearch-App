@@ -17,9 +17,10 @@
   width: 50%;
   max-width: 200px;
   margin-top: 20px;
-  background-color: goldenrod;
+  background-color: #da9b13;
   color: white;
   font-weight: bold;
   border-radius: 15px;
   cursor: pointer;
+  border:3px solid black
 }

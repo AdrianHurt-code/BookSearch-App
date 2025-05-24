@@ -20,6 +20,14 @@ const quotes = [
     text: "Tears are words that need to be written.",
     author: "Paulo Coelho",
   },
+  {
+    text:"A room without books is like a body without a soul.",
+    author:"Marcus Tullius Cicero",
+  },
+  {
+    text:"In ancient times cats were worshipped as gods; they have not forgotten this.",
+    author:"Terry Pratchett"
+  },
 ];
 
 export default quotes;
