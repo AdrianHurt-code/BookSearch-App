@@ -8,7 +8,7 @@ const SearchBar = ({ onSearch, onLoading }) => {
     try {
       onLoading(true); // Spustí loader
       const response = await fetch(
-        `https://openlibrary.org/search.json?title=${encodeURIComponent(query)}`
+        `/search.json?title=${encodeURIComponent(query)}`
       );
       const data = await response.json();
       onSearch(data.docs); // Vrátí všechny výsledky

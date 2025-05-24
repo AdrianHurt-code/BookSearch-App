@@ -44,9 +44,9 @@ const Home = () => {
         <Loader />
       ) : (
         <>
-          <div ref={bookListRef}>
-            <BookList books={currentBooks} />
-          </div>
+          <div ref={bookListRef} style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+  <BookList books={currentBooks} />
+</div>
           {books.length > booksPerPage && (
             <Pagination
               currentPage={currentPage}
