@@ -54,10 +54,14 @@
 .detail-button {
   margin-bottom: 5px;
   padding: 10px 16px;;
-  background-color: #da9b13;
+  background-color: #f3d984;
   border: 3px solid black;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s ease;
+}
+
+.detail-button:hover {
+  background-color: #da9b13;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import QuoteSlider from "../components/QuoteSlider";
 import "./Home.css";
 import SearchBar from "../components/SearchBar";
@@ -17,6 +17,7 @@ const Home = () => {
 
   const handleSearchResults = (results) => {
     setBooks(results);
+    sessionStorage.setItem("searchResults", JSON.stringify(results));
     setCurrentPage(1);
     setNoResults(results.length===0)
     setTimeout(() => {
@@ -28,6 +29,14 @@ const Home = () => {
       }
     }, 100);
   };
+
+  useEffect(() => {
+  const savedResults = sessionStorage.getItem("searchResults");
+  if (savedResults) {
+    const parsedResults = JSON.parse(savedResults);
+    setBooks(parsedResults);
+  }
+}, []);
 
   // Výpočet rozsahu knih pro aktuální stránku
   const indexOfLastBook = currentPage * booksPerPage;
