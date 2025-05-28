@@ -11,3 +11,11 @@ html,
   width: 100%;
   font-family: "Poppins", sans-serif;
 }
+
+:root {
+  --main-color-button:white;
+  --hover-color-button:#f3d984;
+  --box-shadow: 3px 3px 5px grey;
+  --main-border:2px solid black;
+  --main-font:"Poppins, sans-serif";
+}

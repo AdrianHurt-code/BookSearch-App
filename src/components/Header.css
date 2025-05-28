@@ -1,10 +1,10 @@
 .link-home-page,
 .link-about-page {
   text-decoration: none;
+  font-size: larger;
   color: black;
-  font-size: 1.2rem;
-  font-weight: 500;
   transition: transform 0.1s ease-in-out;
+  
 }
 
 
@@ -30,6 +30,7 @@
 
 .logo-name {
   font-weight: 600;
+ 
 }
 
 .nav-body {

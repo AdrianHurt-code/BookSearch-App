@@ -1,17 +1,35 @@
 .book-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  margin: 10px;
-  border: 3px solid black;
+  border:var(--main-border);
   border-radius: 12px;
   width: 100%;
   transition: transform 0.2s ease;
   cursor: pointer;
   background-color: rgb(223, 189, 103);
+  box-shadow: var(--box-shadow);
 }
+
+.card-link {
+  position: absolute;
+  inset: 0; /* top, right, bottom, left = 0 */
+  z-index: 1;
+  content: "";
+}
+
+.card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+
+
 
 .book-card:hover {
   transform: scale(1.03);
@@ -22,6 +40,8 @@
   max-height: 100%;
   object-fit: contain;
 }
+
+
 
 .book-title {
   font-size: 1.1rem;
@@ -46,6 +66,7 @@
   border-radius: 8px;
 }
 
+
 .no-image {
   color: #999;
   font-size: 14px;
@@ -54,8 +75,8 @@
 .detail-button {
   margin-bottom: 5px;
   padding: 10px 16px;;
-  background-color: #f3d984;
-  border: 3px solid black;
+  background-color: var(--main-color-button);
+  border: 1px solid black;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
@@ -63,5 +84,5 @@
 }
 
 .detail-button:hover {
-  background-color: #da9b13;
+  background-color: var(--main-hover-button);
 }

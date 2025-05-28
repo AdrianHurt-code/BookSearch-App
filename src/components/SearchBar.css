@@ -17,10 +17,16 @@
   width: 50%;
   max-width: 200px;
   margin-top: 20px;
-  background-color: #da9b13;
-  color: white;
-  font-weight: bold;
+  background-color:var(--main-color-button);
+  color: black;
   border-radius: 15px;
   cursor: pointer;
-  border:3px solid black
+  border:var(--main-border);
+  box-shadow: var(--box-shadow);
+  font-weight: bold;
+  
+}
+
+.search-button:hover {
+  background-color: var(--hover-color-button);
 }

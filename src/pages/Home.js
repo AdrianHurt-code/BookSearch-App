@@ -58,7 +58,7 @@ const Home = () => {
         <Loader />
       ) : (
         <>
-          <div ref={bookListRef} style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+          <div className="book-list-space" ref={bookListRef}>
   <BookList books={currentBooks} />
 </div>
           {books.length > booksPerPage && (

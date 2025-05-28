@@ -5,6 +5,7 @@
   padding: 40px 20px;
   background-color: #fdf5e6;
   min-height: 100vh;
+  box-shadow: var(--box-shadow);
 }
 
 .book-detail-card {
@@ -37,7 +38,7 @@
 .back-button {
   margin-top: 20px;
   padding: 10px 16px;
-  background-color: #f3d984;
+  background-color: var(--main-color-button);
   border: 2px solid black;
   border-radius: 6px;
   font-weight: bold;

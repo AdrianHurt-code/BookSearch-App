@@ -3,7 +3,7 @@ import "./BookCard.css";
 import { Link } from "react-router-dom";
 
 const BookCard = ({ book }) => {
-  const { title, author_name, cover_i, first_publish_year,key } = book;
+  const { title, author_name, cover_i, first_publish_year, key } = book;
 
   const [isValidImage, setIsValidImage] = useState(true);
 
@@ -22,7 +22,6 @@ const BookCard = ({ book }) => {
     const img = new Image();
     img.src = coverUrl;
     img.onload = () => {
-      // Pokud je obrázek extrémně velký (široký nebo vysoký), schováme ho
       if (img.width > 1000 || img.height > 1500) {
         setIsValidImage(false);
       }
@@ -34,6 +33,9 @@ const BookCard = ({ book }) => {
 
   return (
     <div className="book-card">
+      {bookID && (
+        <Link to={`/book/${bookID}`} className="card-link" aria-label={`View details of ${title}`} />
+      )}
       <div className="book-image-container">
         {isValidImage ? (
           <img src={coverUrl} alt={title} className="book-image" />
@@ -46,12 +48,7 @@ const BookCard = ({ book }) => {
       {first_publish_year && (
         <p className="book-year">First published: {first_publish_year}</p>
       )}
-      
-      {bookID && (
-        <Link to={`/book/${bookID}`}>
-          <button className="detail-button">Detail</button>
-        </Link>
-      )}
+      <button className="detail-button">Detail</button>
     </div>
   );
 };

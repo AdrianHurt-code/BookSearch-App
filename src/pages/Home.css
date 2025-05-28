@@ -1,5 +1,5 @@
 .home-page-space {
-  min-height: 100vh; /* místo height: 90vh */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,5 +23,14 @@ color: black;
 font-weight: bold;
 margin-top: 20px;
 }
+
+.book-list-space {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+ 
+ 
 
 
