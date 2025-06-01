@@ -58,16 +58,6 @@ const BookDetail = () => {
           <div className="book-detail-content">
             <h2>{book.title}</h2>
 
-            <p>
-              <strong>Author:</strong>{" "}
-              {edition?.authors
-                ? edition.authors
-                    .map((author) =>
-                      author.name ? author.name : "Author is not available"
-                    )
-                    .join(", ")
-                : "Unknown author"}
-            </p>
 
             {edition?.number_of_pages && (
               <p>
