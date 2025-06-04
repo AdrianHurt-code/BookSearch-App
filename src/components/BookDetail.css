@@ -49,3 +49,33 @@
 .back-button:hover {
   background-color: #da9b13;
 }
+
+@media (max-width: 600px) {
+  .book-detail-card {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .book-detail-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .book-detail-content {
+    padding: 16px;
+  }
+
+  .book-detail-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .book-detail-content p {
+    font-size: 1rem;
+  }
+
+  .back-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
